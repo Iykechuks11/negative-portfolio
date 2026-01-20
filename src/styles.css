@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+
+@theme {
+  /* This replaces the old tailwind.config.js extend section */
+  --color-neg-bg: #0a0a0a;
+  --color-neg-card: #161616;
+  --color-cyber-green: #00ff9d;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color to match your Cyber Green */
+::selection {
+  background-color: var(--color-cyber-green);
+  color: #000;
+}
+
+.external-link-hover:hover {
+  filter: drop-shadow(0 0 5px var(--color-cyber-green));
+  transform: translate(2px, -2px); /* Makes the arrow move diagonally */
+}

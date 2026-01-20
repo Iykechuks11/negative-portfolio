@@ -1,0 +1,59 @@
+<section class="py-20 min-h-screen px-8 bg-neg-bg border-t border-zinc-900">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-4xl font-black text-white mb-8 tracking-tighter">
+      GET IN <span class="text-cyber-green">TOUCH</span>
+    </h2>
+    @if (!isSubmitted) {
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
+      <div>
+        <label class="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2">Name</label>
+        <input
+          formControlName="name"
+          type="text"
+          class="w-full bg-zinc-950 border border-zinc-800 p-4 text-white focus:outline-none focus:border-cyber-green transition-colors"
+        />
+        @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+        <span class="text-red-500 text-xs mt-1">Name is required (min 3 chars)</span>
+        }
+      </div>
+
+      <div>
+        <label class="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2">Email</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="w-full bg-zinc-950 border border-zinc-800 p-4 text-white focus:outline-none focus:border-cyber-green transition-colors"
+        />
+      </div>
+
+      <div>
+        <label class="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2"
+          >Message</label
+        >
+        <textarea
+          formControlName="message"
+          rows="4"
+          class="w-full bg-zinc-950 border border-zinc-800 p-4 text-white focus:outline-none focus:border-cyber-green transition-colors"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="contactForm.invalid"
+        class="w-full py-4 bg-white text-black font-black uppercase tracking-widest hover:bg-cyber-green disabled:bg-zinc-800 disabled:text-zinc-600 transition-all duration-300"
+      >
+        Send Message
+      </button>
+    </form>
+    } @else {
+    <div class="text-center animate-in zoom-in duration-500">
+      <h2 class="text-6xl font-black text-cyber-green mb-4">SENT!</h2>
+      <p class="text-zinc-400">
+        Thanks, <span class="text-white font-bold">{{ formattedName }}</span> . I'll get back to you
+        soon.
+      </p>
+      <button (click)="isSubmitted = false" class="mt-8 text-white underline">Send another?</button>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,121 @@
+<nav
+  class="sticky top-0 z-50 w-full px-8 py-4 bg-neg-bg/80 backdrop-blur-md border-b border-zinc-800"
+>
+  <div class="relative">
+    <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button
+        type="button"
+        (click)="toggleMenu()"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-none"
+      >
+        <svg
+          [class.hidden]="isMenuOpen"
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <svg
+          [class.hidden]="!isMenuOpen"
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            d="M6 18 18 6M6 6l12 12"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="max-w-7xl mx-auto flex items-center justify-between items-center gap-8">
+      <!-- logo -->
+      <div
+        class="text-2xl font-black tracking-tighter text-white hover:text-cyber-green transition-colors cursor-pointer"
+      >
+        <a routerLink="/">JOHN.<span class="text-cyber-green hover:text-white">DEV.</span></a>
+      </div>
+
+      <!-- menu -->
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex gap-8 items-center">
+          <a
+            routerLink="/"
+            routerLinkActive="text-cyber-green border-b-2 border-cyber-green"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="text-sm uppercase tracking-widest text-zinc-400 hover:text-white transition-all pb-1"
+          >
+            About
+          </a>
+
+          <a
+            routerLink="/projects"
+            routerLinkActive="text-cyber-green border-b-2 border-cyber-green"
+            class="text-sm uppercase tracking-widest text-zinc-400 hover:text-white transition-all pb-1"
+          >
+            Projects
+          </a>
+
+          <a
+            routerLink="/publications"
+            routerLinkActive="text-cyber-green border-b-2 border-cyber-green"
+            class="text-sm uppercase tracking-widest text-zinc-400 hover:text-white transition-all pb-1"
+          >
+            Publications
+          </a>
+
+          <a
+            routerLink="/contact"
+            routerLinkActive="!text-black !bg-cyber-green"
+            class="ml-4 px-5 py-2 bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-cyber-green transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if (isMenuOpen) {
+  <div
+    class="sm:hidden text-center bg-neg-bg border-t border-zinc-800 mt-4 space-y-4 pb-4 transition-all"
+  >
+    <a routerLink="/" (click)="toggleMenu()" class="block text-zinc-400 p-4 hover:bg-zinc-900"
+      >About</a
+    >
+    <a
+      routerLink="/projects"
+      (click)="toggleMenu()"
+      class="block text-zinc-400 p-4 hover:bg-zinc-900"
+      >Projects</a
+    >
+
+    <a
+      routerLink="/publications"
+      (click)="toggleMenu()"
+      class="block text-zinc-400 p-4 hover:bg-zinc-900"
+      >Publications</a
+    >
+
+    <a
+      routerLink="/contact"
+      (click)="toggleMenu()"
+      class="block p-4 hover:bg-zinc-900 hover:text-white bg-white text-black font-bold"
+      >Contact</a
+    >
+  </div>
+  }
+</nav>

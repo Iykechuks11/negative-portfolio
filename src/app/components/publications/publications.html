@@ -1,0 +1,74 @@
+<section class="min-h-screen bg-neg-bg p-12 lg:p-24">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-20 border-b border-zinc-900 pb-10">
+      <h2 class="text-xs uppercase tracking-[0.4em] text-zinc-500 mb-4">Intellectual Property</h2>
+      <h1 class="text-6xl font-black text-white tracking-tighter">
+        RESEARCH & <span class="text-cyber-green">INSIGHTS</span>
+      </h1>
+    </div>
+
+    <div class="space-y-20">
+      @for (pub of publications; track pub.id) {
+      <div class="group relative grid grid-cols-1 md:grid-cols-[150px_1fr] gap-8 items-start">
+        <div class="font-mono text-[11px] text-zinc-600 uppercase tracking-widest pt-2">
+          <p class="mb-2 text-zinc-400">{{ pub.date }}</p>
+          <div
+            class="inline-block border border-zinc-800 px-2 py-1 group-hover:border-cyber-green/50 transition-colors"
+          >
+            {{ pub.category }}
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="flex justify-between items-start gap-4">
+            <h3
+              class="text-3xl font-bold text-white leading-tight group-hover:text-cyber-green transition-colors"
+            >
+              {{ pub.title }}
+            </h3>
+
+            <a
+              [href]="pub.link"
+              target="_blank"
+              class="text-zinc-600 hover:text-white transition-all transform hover:-translate-y-1 hover:translate-x-1"
+              title="Read on Hashnode"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                class="size-7"
+              >
+                <path
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <p
+            class="text-zinc-500 font-medium mt-2 mb-6 tracking-wide underline decoration-zinc-800 decoration-2 underline-offset-4"
+          >
+            Published via {{ pub.publisher }}
+          </p>
+
+          <p class="text-zinc-400 leading-relaxed text-lg max-w-3xl mb-8">
+            {{ pub.abstract }}
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            @for (tag of pub.tags; track tag) {
+            <span class="text-[10px] font-bold text-zinc-700 uppercase tracking-tighter">
+              #{{ tag }}
+            </span>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
