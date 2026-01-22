@@ -37,21 +37,21 @@ export class ProjectService {
       contribution:
         'Architected a custom Angular 19 standalone architecture with a "Negative" design system. Implemented reactive state management for UI toggles and optimized asset delivery for a sub-1s load time.',
       tags: ['Angular', 'Tailwind v4', 'TypeScript'],
-      link: 'https://github.com/your-username/portfolio', // Link to your repo
+      link: 'https://github.com/Iykechuks11/negative-portfolio', // Link to your repo
       isOpen: false,
     },
-    {
-      id: 2,
-      title: 'Secure AI Dashboard',
-      description: 'A real-time monitoring interface for AI-driven security analytics.',
-      problem:
-        'Visualizing high-velocity security data often leads to browser bottlenecks and unreadable UI components.',
-      contribution:
-        'Leveraged RxJS streams to pipe real-time data efficiently. Integrated custom CSS-grid layouts to ensure data density remains readable on mobile devices.',
-      tags: ['RxJS', 'Security', 'Data Viz'],
-      link: 'https://github.com/your-username/ai-dashboard',
-      isOpen: false,
-    },
+    // {
+    //   id: 2,
+    //   title: 'Secure AI Dashboard',
+    //   description: 'A real-time monitoring interface for AI-driven security analytics.',
+    //   problem:
+    //     'Visualizing high-velocity security data often leads to browser bottlenecks and unreadable UI components.',
+    //   contribution:
+    //     'Leveraged RxJS streams to pipe real-time data efficiently. Integrated custom CSS-grid layouts to ensure data density remains readable on mobile devices.',
+    //   tags: ['RxJS', 'Security', 'Data Viz'],
+    //   link: 'https://github.com/your-username/ai-dashboard',
+    //   isOpen: false,
+    // },
   ];
 
   getProjects() {

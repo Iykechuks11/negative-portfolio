@@ -10,6 +10,7 @@ import { ProjectService, Project } from '../../services/project';
 export class Projects {
   private projectService = inject(ProjectService);
   projects: Project[] = this.projectService.getProjects();
+
   toggleDetails(project: any) {
     project.isOpen = !project.isOpen;
   }
