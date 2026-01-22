@@ -1,8 +1,8 @@
 {
   "routes": {
-    "/negative-portfolio": {},
-    "/negative-portfolio/contact": {},
-    "/negative-portfolio/projects": {},
-    "/negative-portfolio/publications": {}
+    "/my-portfolio": {},
+    "/my-portfolio/contact": {},
+    "/my-portfolio/projects": {},
+    "/my-portfolio/publications": {}
   }
 }

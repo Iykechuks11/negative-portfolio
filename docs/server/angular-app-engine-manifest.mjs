@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/negative-portfolio',
+  basePath: '/my-portfolio',
   supportedLocales: {
   "en-US": ""
 },
