@@ -33,14 +33,15 @@ export class Publications {
     },
     {
       id: 3,
-      title: 'An Analysis of MITM Attack Vectors in Local Area Networks',
+      title:
+        'Deploying an Angular Application on Netlify (Fixing the @netlify/angular-runtime Error)',
       publisher: 'Swingment Internal Research',
       date: '2026',
       category: 'Whitepaper',
       abstract:
-        'Exploring the psychological and technical vulnerabilities that lead to successful ARP poisoning in corporate environments.',
+        'Deploying an Angular application on Netlify is usually straightforward; however, errors are inevitable. For example, if you’re deploying an Angular 19 application, especially when using Server-Side Rendering (SSR) ...',
       link: 'https://swingment.hashnode.dev/',
-      tags: ['Network Security', 'MITM'],
+      tags: ['Web Development', 'AngularJs'],
     },
     // Add more here...
   ];
