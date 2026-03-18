@@ -51,6 +51,42 @@ export class ProjectService {
       link: 'https://it-beratung-reinke.de/',
       isOpen: false,
     },
+
+    {
+      id: 3,
+      title: 'CodeWars Solutions',
+      description: 'A link to my codewars profile showcasing my problem-solving skills and proficiency in multiple programming languages.',
+      problem: '',
+      contribution:
+        '.',
+      tags: ['Python', 'C'],
+      link: 'https://www.codewars.com/users/Johnchampion',
+      isOpen: false,
+    },
+
+    {
+      id: 4,
+      title: 'Euro AWS Gameday (16/03/2026)',
+      description: 'A gamified learning experience where participants engage in simulated cyber attack scenarios to enhance their skills in cloud security, incident response, and threat hunting within an AWS environment.',
+      problem: 'A series of simulated cyber attack scenarios designed to test and enhance participants\' skills in cloud security, incident response, and threat hunting within an AWS environment.',
+      contribution:
+        'Utilized AWS services, including VPC, CloudWatch, GuardDuty, and Systems Manager to monitor infrastructure and investigate threats.',
+      tags: ['Python', 'C'],
+      link: 'https://it-beratung-reinke.de/',
+      isOpen: false,
+    },
+
+    {
+      id: 5,
+      title: 'Cloud-Native Database Utility (Python)',
+      description: 'A command-line interface (CLI) utility for backing up any type of database.',
+      problem: 'Inefficient database backup processes leading to data loss and increased storage costs.',
+      contribution:
+        'Compression functionality using gzip, encryption using AES-256, and seamless integration with AWS S3 for secure and efficient database backup management.',
+      tags: ['Python', 'AWS S3', 'Docker', 'PostgreSQL'],
+      link: 'https://it-beratung-reinke.de/',
+      isOpen: false,
+    },
   ];
 
   getProjects() {

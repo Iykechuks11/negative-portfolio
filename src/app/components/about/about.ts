@@ -17,6 +17,6 @@ export class About implements OnInit {
 
   ngOnInit() {
     // 3. Get the data and take only the first 3
-    this.featuredProjects = this.projectService.getProjects().slice(0, 2);
+    this.featuredProjects = this.projectService.getProjects().slice(0, 3);
   }
 }
