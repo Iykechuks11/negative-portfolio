@@ -37,7 +37,7 @@ export class ProjectService {
       contribution:
         'Architected a custom Angular 19 standalone architecture with a "Negative" design system. Implemented reactive state management for UI toggles and optimized asset delivery for a sub-1s load time.',
       tags: ['Angular', 'Tailwind v4', 'TypeScript'],
-      link: 'https://github.com/Iykechuks11/negative-portfolio',
+      link: 'http://ikechukwujohnchukwu.netlify.app/',
       isOpen: false,
     },
     {
