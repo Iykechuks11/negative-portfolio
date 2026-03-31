@@ -54,12 +54,12 @@ export class ProjectService {
 
     {
       id: 3,
-      title: 'CodeWars Solutions',
+      title: 'CodeWars Solutions (C, C++, Python)',
       description: 'A link to my codewars profile showcasing my problem-solving skills and proficiency in multiple programming languages.',
       problem: '',
       contribution:
         '.',
-      tags: ['Python', 'C'],
+      tags: ['Python', 'C', 'C++'],
       link: 'https://www.codewars.com/users/Johnchampion',
       isOpen: false,
     },
@@ -72,7 +72,7 @@ export class ProjectService {
       contribution:
         'Utilized AWS services, including VPC, CloudWatch, GuardDuty, and Systems Manager to monitor infrastructure and investigate threats.',
       tags: ['Python', 'C'],
-      link: 'https://it-beratung-reinke.de/',
+      link: 'https://www.awsgameday.eu/',
       isOpen: false,
     },
 
@@ -84,7 +84,18 @@ export class ProjectService {
       contribution:
         'Compression functionality using gzip, encryption using AES-256, and seamless integration with AWS S3 for secure and efficient database backup management.',
       tags: ['Python', 'AWS S3', 'Docker', 'PostgreSQL'],
-      link: 'https://it-beratung-reinke.de/',
+      link: 'https://github.com/Iykechuks11/Database-Backup-Utility',
+      isOpen: false,
+    },
+    {
+      id: 6,
+      title: 'RCCG, North Macedonia',
+      description: 'A website for the Redeemed Christian Church of God, located in North Macedonia.',
+      problem: 'The church needed a modern, responsive website to share information about their services, events, and community activities with their congregation and the wider public.',
+      contribution:
+        'Designed and developed a user-friendly website using Astro, ensuring it was responsive across all devices. Implemented features such as event calendars, service schedules, and a blog to keep the congregation informed and engaged.',
+      tags: ['Astro', 'JavaScript', 'CSS'],
+      link: 'https://rccgnorthmacedonia.com/',
       isOpen: false,
     },
   ];
