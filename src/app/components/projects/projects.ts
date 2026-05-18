@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ProjectService, Project } from '../../services/project';
+import { Project, ProjectService } from '../../services/project';
 
 @Component({
   selector: 'app-projects',
@@ -11,7 +11,7 @@ export class Projects {
   private projectService = inject(ProjectService);
   projects: Project[] = this.projectService.getProjects();
 
-  toggleDetails(project: any) {
+  toggleDetails(project: Project) {
     project.isOpen = !project.isOpen;
   }
 }

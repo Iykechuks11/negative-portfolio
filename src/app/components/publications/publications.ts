@@ -16,7 +16,7 @@ export class Publications {
       date: '2024',
       category: 'Article',
       abstract:
-        'The research employs simulated experiments to systematically measure and analyze key operational metrics such as insertion and verification times...',
+        'The research employs simulated experiments to systematically measure and analyze key operational metrics such as insertion and verification times.',
       link: 'https://open-research-europe.ec.europa.eu/articles/4-163',
       tags: ['Cryptography', 'Transparent Logs'],
     },
@@ -27,22 +27,20 @@ export class Publications {
       date: '2025',
       category: 'Article',
       abstract:
-        'In the era of the internet and smart devices, malware detection has become a crucial factor for system security...',
+        'In the era of the internet and smart devices, malware detection has become a crucial factor for system security.',
       link: 'https://ia.spcras.ru/index.php/sp/article/view/16592',
-      tags: ['Malware Detection', 'Machine Learning, Cybersecurity'],
+      tags: ['Malware Detection', 'Machine Learning', 'Cybersecurity'],
     },
     {
       id: 3,
-      title:
-        'Deploying an Angular Application on Netlify (Fixing the @netlify/angular-runtime Error)',
+      title: 'Deploying an Angular Application on Netlify',
       publisher: 'Swingment Internal Research',
       date: '2026',
       category: 'Whitepaper',
       abstract:
-        'Deploying an Angular application on Netlify is usually straightforward; however, errors are inevitable. For example, if you’re deploying an Angular 19 application, especially when using Server-Side Rendering (SSR) ...',
+        'A practical note on deploying Angular applications on Netlify and resolving Angular runtime deployment errors.',
       link: 'https://swingment.hashnode.dev/',
-      tags: ['Web Development', 'AngularJs'],
+      tags: ['Web Development', 'Angular'],
     },
-    // Add more here...
   ];
 }

@@ -1,0 +1,72 @@
+<section class="min-h-screen bg-neg-bg p-8 md:p-12 lg:p-24">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-20 border-b border-zinc-900 pb-10">
+      <h2 class="text-xs uppercase tracking-[0.4em] text-zinc-500 mb-4">Speaking</h2>
+      <h1 class="text-5xl md:text-6xl font-black text-white tracking-tighter">
+        TALKS & <span class="text-cyber-green">PRESENTATIONS</span>
+      </h1>
+    </div>
+
+    <div class="space-y-12">
+      @for (talk of talks; track talk.title) {
+      <article class="group border-l border-zinc-900 pl-8 hover:border-cyber-green transition-colors">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="font-mono text-[11px] text-zinc-500 uppercase tracking-widest">
+            {{ talk.date }}
+          </span>
+          <span class="border border-zinc-800 px-2 py-1 text-[10px] text-zinc-500 uppercase tracking-widest">
+            {{ talk.format }}
+          </span>
+        </div>
+
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h3 class="text-3xl font-bold text-white leading-tight group-hover:text-cyber-green transition-colors">
+              {{ talk.title }}
+            </h3>
+            <p class="text-zinc-500 font-medium mt-2 mb-6">
+              {{ talk.venue }}
+            </p>
+          </div>
+
+          @if (talk.link) {
+          <a
+            [href]="talk.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-zinc-600 hover:text-white transition-all transform hover:-translate-y-1 hover:translate-x-1"
+            title="View talk"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              class="size-7"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          }
+        </div>
+
+        <p class="text-zinc-400 leading-relaxed text-lg max-w-3xl mb-8">
+          {{ talk.summary }}
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          @for (tag of talk.tags; track tag) {
+          <span class="text-[10px] font-bold text-zinc-700 uppercase tracking-widest">
+            #{{ tag }}
+          </span>
+          }
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

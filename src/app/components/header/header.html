@@ -51,7 +51,7 @@
 
       <!-- menu -->
       <div class="hidden sm:ml-6 sm:block">
-        <div class="flex gap-8 items-center">
+        <div class="flex gap-6 items-center">
           <a
             routerLink="/"
             routerLinkActive="text-cyber-green border-b-2 border-cyber-green"
@@ -75,6 +75,14 @@
             class="text-sm uppercase tracking-widest text-zinc-400 hover:text-white transition-all pb-1"
           >
             Publications
+          </a>
+
+          <a
+            routerLink="/talks"
+            routerLinkActive="text-cyber-green border-b-2 border-cyber-green"
+            class="text-sm uppercase tracking-widest text-zinc-400 hover:text-white transition-all pb-1"
+          >
+            Talks
           </a>
 
           <a
@@ -108,6 +116,10 @@
       (click)="toggleMenu()"
       class="block text-zinc-400 p-4 hover:bg-zinc-900"
       >Publications</a
+    >
+
+    <a routerLink="/talks" (click)="toggleMenu()" class="block text-zinc-400 p-4 hover:bg-zinc-900"
+      >Talks / Presentations</a
     >
 
     <a
